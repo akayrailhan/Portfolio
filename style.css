@@ -357,5 +357,156 @@ portfolio-highlights {
   font-size: 1.8rem;
 }
 
+/* Base styles */
+:root {
+  --primary-color: #61a5c2;
+  --secondary-color: #4a90a6;
+  --bg-color: #e6f2f8;
+  --text-color: #222;
+}
 
+/* Responsive typography */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Navigation responsiveness */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+/* Hero section responsiveness */
+.hero {
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 40vh;
+  }
+}
+
+/* Skills grid responsiveness */
+.skills-container {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Projects grid responsiveness */
+.projects-container {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Contact form responsiveness */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Main content responsiveness */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 1.5rem;
+}
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer responsiveness */
+footer {
+  position: relative;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Utility classes for spacing */
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.py-1 { padding: 1rem 0; }
+.px-1 { padding: 0 1rem; }
+
+/* Button responsiveness */
+.cv-button, .project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .cv-button, .project-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Experience items responsiveness */
+.experience-item {
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+/* Portfolio highlights responsiveness */
+.portfolio-highlights li {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, 
+  .cv-button, 
+  .project-link,
+  nav a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
 
